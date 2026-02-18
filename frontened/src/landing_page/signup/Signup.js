@@ -391,7 +391,7 @@ function Signup() {
             <div className="form-footer">
               <p>
                 Already have an account?{" "}
-                <a href="http://localhost:3001/login" className="login-link">
+                <a href={`${process.env.REACT_APP_DASHBOARD_URL || 'http://localhost:3001'}/login`} className="login-link">
                   Login to Kite
                 </a>
               </p>

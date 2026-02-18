@@ -90,7 +90,7 @@ function Navbar() {
                      <Link to="/signup" className="btn-signup">
                        Sign up
                      </Link>
-                     <a href="http://localhost:3003/login" className="btn-login">
+                     <a href={`${process.env.REACT_APP_DASHBOARD_URL || 'http://localhost:3001'}/login`} className="btn-login">
                        Login
                      </a>
                    </>
@@ -119,13 +119,13 @@ function Navbar() {
                            </div>
                          </div>
                          <hr />
-                         <a href="http://localhost:3003" className="dropdown-item">
+                         <a href={process.env.REACT_APP_DASHBOARD_URL || 'http://localhost:3001'} className="dropdown-item">
                            <span>📊</span> Dashboard
                          </a>
-                         <a href="http://localhost:3003/holdings" className="dropdown-item">
+                         <a href={`${process.env.REACT_APP_DASHBOARD_URL || 'http://localhost:3001'}/holdings`} className="dropdown-item">
                            <span>💼</span> Holdings
                          </a>
-                         <a href="http://localhost:3003/funds" className="dropdown-item">
+                         <a href={`${process.env.REACT_APP_DASHBOARD_URL || 'http://localhost:3001'}/funds`} className="dropdown-item">
                            <span>💰</span> Funds
                          </a>
                          <hr />
